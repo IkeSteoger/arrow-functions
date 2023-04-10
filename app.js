@@ -154,17 +154,13 @@ console.log(joe);
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
-// 
-// Stopping point for lunch!
-// 
-
 Student.prototype.greeting = function() {
   return `Hi, my name is ${this.name}`;
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
-// console.log(joe.greeting());
+console.log(joe.greeting());
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
@@ -175,7 +171,7 @@ Student.courseName = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(Student.courseName());
+console.log(Student.courseName());
 
 
 
@@ -186,17 +182,17 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scope();
+joe.scope();
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scopeArrow();
+joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+// "this" is an object of the constructor function Student, thus outputs all information contained in that object
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+// "this" is outputting information about the whole window, rather than the constructor function of joe, because of how the arrow function interacts
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// This functions differently because the "this" context is never reset within an arrow function and therefore the context is the entire browser/global window object.
